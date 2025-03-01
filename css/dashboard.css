@@ -1,0 +1,224 @@
+.dashboard-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dashboard-content {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 1rem;
+    background-color: white;
+    border-right: 1px solid var(--border-color);
+}
+
+.filter-section h3 {
+    margin-bottom: 1rem;
+}
+
+.filter-group {
+    margin-bottom: 1rem;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.controls {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Канбан-доска */
+.kanban-board {
+    display: flex;
+    gap: 1rem;
+    height: calc(100vh - 150px);
+    overflow-x: auto;
+}
+
+.kanban-column {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--light-color);
+    border-radius: 8px 8px 0 0;
+}
+
+.column-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.tasks-container {
+    padding: 1rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Карточка задачи */
+.task-card {
+    background-color: white;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    cursor: grab;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.task-id {
+    background-color: var(--light-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.task-actions button:hover {
+    opacity: 1;
+}
+
+.task-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.task-details {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.task-details > div {
+    margin-bottom: 0.3rem;
+}
+
+.task-details .label {
+    font-weight: 500;
+}
+
+.task-details .value {
+    margin-left: 0.3rem;
+}
+
+.task-attachments-indicator {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* Перетаскивание задач */
+.task-card.dragging {
+    opacity: 0.5;
+}
+
+.tasks-container.drag-over {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Прикрепленные файлы */
+.attachments-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.attachment-item {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.attachment-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.attachment-item .remove-attachment {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.attachment-file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    text-align: center;
+    word-break: break-all;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трекер задач - Авторизация</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Основной favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"> <!-- Для современных браузеров -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"> <!-- Для старых браузеров -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"> <!-- Для iOS -->
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1>Трекер задач</h1>
+                <p>Управляйте своими задачами эффективно</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Вход</button>
+                <button class="tab-btn" data-tab="register">Регистрация</button>
+            </div>
+            
+            <div class="auth-forms">
+                <!-- Форма входа -->
+                <form id="login-form" class="auth-form active">
+                    <div class="form-group">
+                        <label for="login-username">Имя пользователя</label>
+                        <input type="text" id="login-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Пароль</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Войти</button>
+                </form>
+                
+                <!-- Форма регистрации -->
+                <form id="register-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="register-username">Имя пользователя</label>
+                        <input type="text" id="register-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Пароль</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm-password">Подтвердите пароль</label>
+                        <input type="password" id="register-confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Зарегистрироваться</button>
+                </form>
+            </div>
+            
+            <div id="auth-message" class="auth-message"></div>
+        </div>
+    </div>
+    
+    <div id="notification" class="notification"></div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/notifications.js"></script>
+</body>
+</html>
